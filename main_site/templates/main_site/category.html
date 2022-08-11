@@ -1,0 +1,33 @@
+{% extends "main_site/layout.html" %}
+{%load static%}
+
+{% block body%}
+<div id="cat_title_div">
+    <center><h2  id="cat_title">{{title}}</h2></center>
+</div>
+
+{%for product in products%}
+    {% comment %} <center><div class="row"> {% endcomment %}
+        <center><div class="cat_product">
+            <div class="cat_img">
+                <img src="{% static 'main_site/productos/'%}{{dir}}/{{product}}">
+            </div>
+            {% comment %} <h3 class="prod_title">Sala10</h3> {% endcomment %}
+        </div></center>
+        {% comment %} <div class="product">
+            <div class="prod_img">
+                <a href="{% url 'gabinetes'%}"><img src="{% static 'main_site/productos/comedor/comedor14.jpeg'%}"></a>
+            </div>
+            <a href="{% url 'gabinetes'%}"><h3 class="prod_title">Comedores</h3></a>
+        </div>
+    </div></center> {% endcomment %}
+{%endfor%}
+
+<div id="sticky_contact">
+    <center>
+    Interesado en nuestros productos?</br>
+    Llama ahora para una cotización!</br>
+    (+503) 2281-5223
+    </center>
+</div>
+{%endblock%}

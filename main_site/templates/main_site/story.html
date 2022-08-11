@@ -1,0 +1,61 @@
+{% extends "main_site/layout.html" %}
+{%load static%}
+
+
+{% block body %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.min.js"></script>
+    <img id="big_banner" src="{% static 'main_site/muebleria.JPG'%}">
+
+</br>
+</br>
+    <div class="story_div">
+        <center><div id="story_text">
+            <h4>Nuestra Historia</h4>
+            <p>Comercial Casa Blanca fue comenzado por nuestra fundadora, Blanca Candray, hace mas de 25 anos. {% lorem 100 w random %}</p>
+        </div></center>
+        <div class="slideDiv">
+            <h5 style="font-size: 20px">Fundadora</h5>
+            <h5 style="font-size: 25px">Blanca Candray</h5>
+            <img class="blanqui" src="{% static 'main_site/blanqui.png'%}">
+        </div>
+    </div>
+</br>
+</br>
+    <div class="story_div">
+        <div class="gerald_div">
+            <div class="slideDiv2">
+                <h5 class="gerald_item" style="font-size: 20px">Gerente de Ventas</h5>
+                <h5 class="gerald_item" style="font-size: 25px">Gerald Candray</h5>
+                <img class="blanqui gerald_item" style="display:block;" src="{% static 'main_site/gerald.png'%}">
+            </div>
+        </div>
+        <center><div id="values">
+            <h4>Nuestros Valores</h4>
+            <p>Nosotros creemos que el cliente siempre viene primero y nos esforzamos para darle la mejor 
+                experiencia posible a todos nuestros clientes. Siempre buscaremos la mejor manera de 
+                servirle y nos aseguraremos que su casa u oficina está amueblada con los mejores productos. 
+                Nuestro equipo siempre esta a su disposición, y con envíos hacia todas partes de El Salvador, 
+                nunca estamos demasiado lejos para servirle. Comercial Casa Blanca toma orgullo en la calidad 
+                de sus productos, y nunca le venderemos nada que nosotros mismos no usaríamos. Además, con 
+                más de 25 años de experiencia, nuestro equipo seguramente encontrara la pieza que le hace 
+                falta a su hogar. Contáctanos ahora para más información!</p>
+        </div></center>
+        <div class="slideDiv">
+            <h5 style="font-size: 20px">Gerente de Operaciones</h5>
+            <h5 style="font-size: 25px">Pedro Urbina</h5>
+            <img class="blanqui" src="{% static 'main_site/pedro.png'%}">
+        </div>
+    </div>
+</br>
+</br>
+    <center><div id="value_circles">
+        <img src="{% static 'main_site/service2.png'%}">
+        <img src="{% static 'main_site/quality2.png'%}">
+        <img src="{% static 'main_site/honesty2.png'%}">
+    </div></center>
+</br>
+</br>
+
+    <script src="{% static 'main_site/story.js' %}"></script>
+    
+{% endblock%}

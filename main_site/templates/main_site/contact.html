@@ -1,0 +1,21 @@
+{% extends "main_site/layout.html" %}
+{%load static%}
+
+
+{% block body %}
+    <img id="big_banner" src="{% static 'main_site/big_banner.png'%}">
+    <div id="contact_socials">
+        <div id="phone">
+            <h5>Llámanos</h5>
+            <h5>(+503) 2281-5223</h5>
+        </div>
+        <div id="social_box">
+            <h6>Encuéntranos en nuestras redes sociales</h6>
+            <p style="font-size: 20px">Email: comercialcasablanca@gmail.com</p>
+            <a href="https://www.facebook.com/comercialcasablanca"><img id="face_book2" src="{% static 'main_site/facebook.png'%}"></a>
+            <a href="https://www.instagram.com/comercialcasablancaelsalvador/"><img id="insta2" src="{% static 'main_site/instagram2.png'%}"></a>
+            <a href="https://wa.me/50379419801"><img id="whats2" src="{% static 'main_site/whatsapp2.png'%}"></a>
+        </div>
+    </div>
+    <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.3403050491293!2d-89.19912068534639!3d13.697827490382398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330ee88fa25a9%3A0xb4bceeba89fa401e!2s4a%20Calle%20Poniente%20807%2C%20San%20Salvador%2C%20El%20Salvador!5e0!3m2!1sen!2sus!4v1659381039777!5m2!1sen!2sus" width="1000" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+{% endblock %}

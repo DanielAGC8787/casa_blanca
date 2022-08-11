@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title%}Comercio Casa Blanca{%endblock%}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'main_site/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div id="strip">
+            <div class="banner">
+                <img id="home_logo" src="{% static 'main_site/casablanca_logo.png'%}">
+                <img id="company_name" src="{% static 'main_site/company_name2.png'%}">
+                <div id="socials">
+                <a href="https://www.facebook.com/comercialcasablanca"><img id="face_book" src="{% static 'main_site/facebook2.png'%}"></a>
+                <a href="https://www.instagram.com/comercialcasablancaelsalvador/"><img id="insta" src="{% static 'main_site/instagram.png'%}"></a>
+                <a href="https://wa.me/50379419801"><img id="whats" src="{% static 'main_site/whatsapp.png'%}"></a>
+                </div>
+            </div>
+        </div>
+        <center><div id="headers">
+            <div class="header">
+                <a href="{% url 'index'%}"><h2>Inicio</h2></a>
+            </div>
+            <div class="header">
+                <a href="{% url 'products'%}"><h2>Productos</h2></a> 
+            </div>
+            <div class="header">
+                <a href="{% url 'contact'%}"><h2>Contáctanos</h2></a>
+            </div>
+            <div class="header">
+                <a href="{% url 'story'%}"><h2>Quiénes Somos</h2></a>
+            </div>
+        </div></center>
+        <div id="content">
+        {% block body %}
+        {% endblock %}
+        </div>
+        <div id="bottom_strip">
+            <div id="bottom_links" style="margin-top:20px">
+                <div style="margin-top:0px"><h3>Inicio</h3></div>
+                <div><h3>Productos</h3></div>
+                <a href="{% url 'contact'%}"><div><h3>Contáctanos</h3></div></a>
+                <div><h3>Quiénes Somos</h3></div>
+            </div>
+            <div id="hours">
+                <h2>Horas De Operación</h2>
+                <p>Lunes a Viernes: 8:30AM - 5:45PM</p>
+                <p>Domingo: 8:30AM - 3PM</p>
+            </div>
+            <div id="bottom_contact">
+                <h2>Contáctanos</h2>
+                <p>4a Calle Poniente #807</p> <p> San Salvador, El Salvador</p>
+                <p>(+503) 2281-5223</p>
+                <p>comercialcasablanca@gmail.com</p>
+            </div>
+            <div id="bottom_home">
+                <img id="home_logo2" src="{% static 'main_site/casablanca_logo.png'%}">
+                <div id="bottom_socials" style="margin-top:10px">
+                    <a href="https://www.facebook.com/comercialcasablanca"><img id="face_book2" src="{% static 'main_site/facebook.png'%}"></a>
+                    <a href="https://www.instagram.com/comercialcasablancaelsalvador/"><img id="insta2" src="{% static 'main_site/instagram2.png'%}"></a>
+                    <a href="https://wa.me/50379419801"><img id="whats2" src="{% static 'main_site/whatsapp2.png'%}"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
