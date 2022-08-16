@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(5qoh5sru#9r@nz)52(2ya)g$6to+i1lwodh50wf+-2#)#p9$7
 # SECURITY WARNING: don't run with debug turned on in production!
 # when loading in images in testing, load them in when debug = True. Then, once putting site into production, 
 # change debug to false
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'comercialcasablanca.herokuapp.com']
 
