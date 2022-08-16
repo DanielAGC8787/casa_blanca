@@ -21,12 +21,13 @@ def products(request):
     return render(request, "main_site/products.html")
 
 def salas(request):
-    products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\salas")]
-    return render(request, "main_site/category.html", {
-        "products": products,
-        "dir": "salas",
-        "title": "Salas"
-    })
+    return render (request, "main_site/test.html")
+    # products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\salas")]
+    # return render(request, "main_site/category.html", {
+    #     "products": products,
+    #     "dir": "salas",
+    #     "title": "Salas"
+    # })
 
 def gabinetes(request):
     products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\gabinetes")]
