@@ -4,3 +4,5 @@
 4. mensaje cuando uno se inscribe deberia ser abajo, no arriba
 5. Asegurar que sale bien el diseno en movil tambien
 6. Asegurar que slideshow sirve en movil
+7. Cambiar Cia a silla
+8. Agregrar sabado a horas

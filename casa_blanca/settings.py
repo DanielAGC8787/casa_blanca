@@ -24,6 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(5qoh5sru#9r@nz)52(2ya)g$6to+i1lwodh50wf+-2#)#p9$7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# when loading in images in testing, load them in when debug = True. Then, once putting site into production, 
+# change debug to false
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'comercialcasablanca.herokuapp.com']
@@ -79,7 +81,7 @@ WSGI_APPLICATION = 'casa_blanca.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3'
     }
 }
 
@@ -119,9 +121,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), ) 
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-MEDIA_URL = '/images/' 
+MEDIA_URL = 'images/' 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 # Default primary key field type

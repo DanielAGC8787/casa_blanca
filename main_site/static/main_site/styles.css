@@ -204,6 +204,7 @@ h3{
     color: white;
     justify-content: center;
     border-top: 20px solid orange;
+    width: 100%;
 }
 
 #bottom_socials{
@@ -213,7 +214,6 @@ h3{
 
 #bottom_strip div{
     margin-top: 40px;
-    margin-left: 20px;
     margin-right: 20px;
 }
 
