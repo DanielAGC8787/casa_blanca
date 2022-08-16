@@ -25,7 +25,6 @@ def salas(request):
     products = Sala.objects.all()
     return render(request, "main_site/category.html", {
         "products": products,
-        "dir": "salas",
         "title": "Salas"
     })
 
@@ -33,7 +32,6 @@ def gabinetes(request):
     products = Gabinete.objects.all()
     return render(request, "main_site/category.html", {
         "products": products,
-        "dir": "gabinetes",
         "title": "Gabinetes"
     })
 
@@ -41,15 +39,13 @@ def cias(request):
     products = Silla.objects.all()
     return render(request, "main_site/category.html", {
         "products": products,
-        "dir": "cias",
-        "title": "Cias"
+        "title": "Sillas"
     })
 
 def escritorios(request):
     products = Escritorio.objects.all()
     return render(request, "main_site/category.html", {
         "products": products,
-        "dir": "escritorios",
         "title": "Escritorios"
     })
 
@@ -57,15 +53,13 @@ def comedor(request):
     products = Comedor.objects.all()
     return render(request, "main_site/category.html", {
         "products": products,
-        "dir": "comedor",
-        "title": "Comedor"
+        "title": "Comedores"
     })
 
 def ninos(request):
     products = Nino.objects.all()
     return render(request, "main_site/category.html", {
         "products": products,
-        "dir": "ninos",
         "title": "Niños"
     })
 
