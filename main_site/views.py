@@ -30,9 +30,9 @@ def salas(request):
     # })
 
 def gabinetes(request):
-    products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\gabinetes")]
+    # products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\gabinetes")]
     return render(request, "main_site/category.html", {
-        "products": products,
+        # "products": products,
         "dir": "gabinetes",
         "title": "Gabinetes"
     })
