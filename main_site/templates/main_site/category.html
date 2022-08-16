@@ -10,7 +10,7 @@
     {% comment %} <center><div class="row"> {% endcomment %}
         <center><div class="cat_product">
             <div class="cat_img">
-                <img src="{% static 'main_site/productos/'%}{{dir}}/{{product}}">
+                <img src="{{ product.url }}">
             </div>
             {% comment %} <h3 class="prod_title">Sala10</h3> {% endcomment %}
         </div></center>

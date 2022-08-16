@@ -6,6 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from main_site.models import Correo
 from os import listdir
 from os.path import isfile, join
+from .models import Sala, Gabinete, Silla, Comedor, Escritorio, Nino
 # Create your views here.
 
 def index(request):
@@ -21,24 +22,23 @@ def products(request):
     return render(request, "main_site/products.html")
 
 def salas(request):
-    return render (request, "main_site/test.html")
-    # products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\salas")]
-    # return render(request, "main_site/category.html", {
-    #     "products": products,
-    #     "dir": "salas",
-    #     "title": "Salas"
-    # })
+    products = Sala.objects.all()
+    return render(request, "main_site/category.html", {
+        "products": products,
+        "dir": "salas",
+        "title": "Salas"
+    })
 
 def gabinetes(request):
-    # products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\gabinetes")]
+    products = Gabinete.objects.all()
     return render(request, "main_site/category.html", {
-        # "products": products,
+        "products": products,
         "dir": "gabinetes",
         "title": "Gabinetes"
     })
 
 def cias(request):
-    products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\cias")]
+    products = Silla.objects.all()
     return render(request, "main_site/category.html", {
         "products": products,
         "dir": "cias",
@@ -46,7 +46,7 @@ def cias(request):
     })
 
 def escritorios(request):
-    products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\escritorios")]
+    products = Escritorio.objects.all()
     return render(request, "main_site/category.html", {
         "products": products,
         "dir": "escritorios",
@@ -54,7 +54,7 @@ def escritorios(request):
     })
 
 def comedor(request):
-    products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\comedor")]
+    products = Comedor.objects.all()
     return render(request, "main_site/category.html", {
         "products": products,
         "dir": "comedor",
@@ -62,7 +62,7 @@ def comedor(request):
     })
 
 def ninos(request):
-    products = [f for f in listdir("C:\\Users\\danie\\OneDrive\\Development Programs\\Django\\casa_blanca\\main_site\\static\\main_site\\productos\\ninos")]
+    products = Nino.objects.all()
     return render(request, "main_site/category.html", {
         "products": products,
         "dir": "ninos",
